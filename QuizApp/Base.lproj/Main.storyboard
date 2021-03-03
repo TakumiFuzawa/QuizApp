@@ -54,7 +54,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-7D-CER">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-7D-CER">
                                 <rect key="frame" x="20" y="432.66666666666669" width="335" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <state key="normal" title="Button"/>
@@ -62,7 +62,7 @@
                                     <action selector="btnActionWithSender:" destination="wZk-82-AEY" eventType="touchUpInside" id="r6I-Of-cj7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJm-lE-ri7">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJm-lE-ri7">
                                 <rect key="frame" x="20" y="500.66666666666674" width="335" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <state key="normal" title="Button"/>
@@ -70,7 +70,7 @@
                                     <action selector="btnActionWithSender:" destination="wZk-82-AEY" eventType="touchUpInside" id="qT0-cY-nQB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x4-BG-JIg">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x4-BG-JIg">
                                 <rect key="frame" x="20" y="568.66666666666663" width="335" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <state key="normal" title="Button"/>
@@ -78,7 +78,7 @@
                                     <action selector="btnActionWithSender:" destination="wZk-82-AEY" eventType="touchUpInside" id="OGl-Rm-KYq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bW-CZ-ahA">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bW-CZ-ahA">
                                 <rect key="frame" x="20" y="636.66666666666663" width="335" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <state key="normal" title="Button"/>
@@ -117,6 +117,7 @@
                         <outlet property="quizButton4" destination="7bW-CZ-ahA" id="iXh-MA-f74"/>
                         <outlet property="quizNumberLabel" destination="DTS-od-ly4" id="DOE-t1-lCR"/>
                         <outlet property="quizTextView" destination="6wE-xg-O90" id="Aaf-c6-fWo"/>
+                        <segue destination="T0Q-AI-fhO" kind="presentation" identifier="goScore" id="SmW-Dj-27d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1O-Bg-YWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -126,7 +127,7 @@
         <!--Score View Controller-->
         <scene sceneID="G0r-oV-Svo">
             <objects>
-                <viewController id="T0Q-AI-fhO" customClass="ScoreViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="T0Q-AI-fhO" customClass="ScoreViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Hn-xJ-cIq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
