@@ -65,6 +65,6 @@ class QuizViewController: UIViewController {
     
     //ボタンアクション
     @IBAction func btnAction(sender: UIButton) {
-        
+        print(sender.tag)
     }
 }
