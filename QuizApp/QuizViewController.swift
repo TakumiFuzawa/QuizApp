@@ -14,6 +14,7 @@ class QuizViewController: UIViewController {
     var csvArray: [String] = []
     var quizArray: [String] = []
     var quizCount = 0
+    var correctCount = 0
     
     @IBOutlet var quizNumberLabel: UILabel!
     @IBOutlet var quizTextView: UITextView!
@@ -36,7 +37,10 @@ class QuizViewController: UIViewController {
         print(csvArray)
         
         quizArray = csvArray[quizCount].components(separatedBy: ",")
-
+        
+        quizTextView.text = quizArray[0]
+        quizTextView.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        
         quizButton1.setTitleColor(colors.blue, for: .normal)
         quizButton1.setTitle(quizArray[2], for: .normal)
         quizButton2.setTitleColor(colors.blue, for: .normal)
@@ -45,6 +49,37 @@ class QuizViewController: UIViewController {
         quizButton3.setTitle(quizArray[4], for: .normal)
         quizButton4.setTitleColor(colors.blue, for: .normal)
         quizButton4.setTitle(quizArray[5], for: .normal)
+    }
+    
+    //値の受け渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let scoreVC = segue.destination as! ScoreViewController
+        scoreVC.correct = correctCount
+    }
+    
+    //nextquiz
+    func nextQuiz() {
+        quizCount += 1
+        
+        if quizCount < csvArray.count {
+    
+            quizArray = csvArray[quizCount].components(separatedBy: ",")
+            quizNumberLabel.text = "第\(quizCount + 1)問"
+            quizTextView.text = quizArray[0]
+            
+            quizButton1.setTitleColor(colors.blue, for: .normal)
+            quizButton1.setTitle(quizArray[2], for: .normal)
+            quizButton2.setTitleColor(colors.blue, for: .normal)
+            quizButton2.setTitle(quizArray[3], for: .normal)
+            quizButton3.setTitleColor(colors.blue, for: .normal)
+            quizButton3.setTitle(quizArray[4], for: .normal)
+            quizButton4.setTitleColor(colors.blue, for: .normal)
+            quizButton4.setTitle(quizArray[5], for: .normal)
+            
+        } else {
+            performSegue(withIdentifier: "goScore", sender: nil)
+        }
+        
     }
     
     //csvファイルを読み込む
@@ -65,6 +100,13 @@ class QuizViewController: UIViewController {
     
     //ボタンアクション
     @IBAction func btnAction(sender: UIButton) {
-        print(sender.tag)
+        if sender.tag == Int(quizArray[1]) {
+            correctCount += 1
+            print("正解")
+        } else {
+            print("不正解")
+        }
+        print("スコア : \(correctCount)")
+        nextQuiz()
     }
 }
