@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     //buttonを押したときのアクション
     @objc func tapActionButton() {
-        performSegue(withIdentifier: "goQuiz", sender: nil)
+        performSegue(withIdentifier: "goStart", sender: nil)
     }
     
     //viewのセットアップ

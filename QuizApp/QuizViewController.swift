@@ -22,6 +22,7 @@ class QuizViewController: UIViewController {
     @IBOutlet var quizButton2: UIButton!
     @IBOutlet var quizButton3: UIButton!
     @IBOutlet var quizButton4: UIButton!
+    @IBOutlet var judgeImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,10 +104,25 @@ class QuizViewController: UIViewController {
         if sender.tag == Int(quizArray[1]) {
             correctCount += 1
             print("正解")
+            judgeImageView.image = UIImage(named: "circle")
         } else {
             print("不正解")
+            judgeImageView.image = UIImage(named: "unchecked")
         }
         print("スコア : \(correctCount)")
-        nextQuiz()
+        judgeImageView.isHidden = false
+        quizButton1.isEnabled = false
+        quizButton2.isEnabled = false
+        quizButton3.isEnabled = false
+        quizButton4.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.judgeImageView.isHidden = true
+            self.quizButton1.isEnabled = true
+            self.quizButton2.isEnabled = true
+            self.quizButton3.isEnabled = true
+            self.quizButton4.isEnabled = true
+            self.nextQuiz()
+        }
+       
     }
 }
