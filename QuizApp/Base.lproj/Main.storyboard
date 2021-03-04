@@ -19,7 +19,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="wZk-82-AEY" kind="presentation" identifier="goQuiz" id="g3V-xO-KxO"/>
+                        <segue destination="XxC-cp-4Wb" kind="presentation" identifier="goStart" id="fLx-RN-Gav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,14 +86,23 @@
                                     <action selector="btnActionWithSender:" destination="wZk-82-AEY" eventType="touchUpInside" id="6jR-SZ-2ze"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cPC-h9-L9Z">
+                                <rect key="frame" x="20" y="144" width="335" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="8rw-Dk-0RX"/>
+                                    <constraint firstAttribute="width" constant="335" id="JGc-uH-cG3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pVE-c2-1oR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cPC-h9-L9Z" firstAttribute="leading" secondItem="pVE-c2-1oR" secondAttribute="leading" constant="20" id="0Qy-K5-uiu"/>
                             <constraint firstItem="pVE-c2-1oR" firstAttribute="trailing" secondItem="Mcg-7D-CER" secondAttribute="trailing" constant="20" id="3rn-dV-WPx"/>
                             <constraint firstItem="pVE-c2-1oR" firstAttribute="trailing" secondItem="6wE-xg-O90" secondAttribute="trailing" constant="15" id="E9c-bB-u78"/>
                             <constraint firstItem="pVE-c2-1oR" firstAttribute="trailing" secondItem="7bW-CZ-ahA" secondAttribute="trailing" constant="20" id="EHl-Hg-ZVw"/>
                             <constraint firstItem="6x4-BG-JIg" firstAttribute="top" secondItem="sJm-lE-ri7" secondAttribute="bottom" constant="35" id="Eyu-gT-6YP"/>
+                            <constraint firstItem="pVE-c2-1oR" firstAttribute="trailing" secondItem="cPC-h9-L9Z" secondAttribute="trailing" constant="20" id="Fnt-ct-wGE"/>
                             <constraint firstItem="7bW-CZ-ahA" firstAttribute="leading" secondItem="pVE-c2-1oR" secondAttribute="leading" constant="20" id="Fsd-Yf-3rB"/>
                             <constraint firstItem="pVE-c2-1oR" firstAttribute="trailing" secondItem="DTS-od-ly4" secondAttribute="trailing" constant="15" id="HsG-Uf-Pd4"/>
                             <constraint firstItem="pVE-c2-1oR" firstAttribute="trailing" secondItem="sJm-lE-ri7" secondAttribute="trailing" constant="20" id="Hxu-Zb-nOW"/>
@@ -102,6 +111,7 @@
                             <constraint firstItem="Mcg-7D-CER" firstAttribute="top" secondItem="6wE-xg-O90" secondAttribute="bottom" constant="75" id="UxX-ZA-7Zb"/>
                             <constraint firstItem="pVE-c2-1oR" firstAttribute="trailing" secondItem="6x4-BG-JIg" secondAttribute="trailing" constant="20" id="W3f-7p-Hfr"/>
                             <constraint firstItem="sJm-lE-ri7" firstAttribute="top" secondItem="Mcg-7D-CER" secondAttribute="bottom" constant="35" id="Wh6-3K-u6i"/>
+                            <constraint firstItem="cPC-h9-L9Z" firstAttribute="top" secondItem="pVE-c2-1oR" secondAttribute="top" constant="100" id="cyj-GU-6kO"/>
                             <constraint firstItem="6x4-BG-JIg" firstAttribute="leading" secondItem="pVE-c2-1oR" secondAttribute="leading" constant="20" id="dCm-tL-Ql6"/>
                             <constraint firstItem="7bW-CZ-ahA" firstAttribute="top" secondItem="6x4-BG-JIg" secondAttribute="bottom" constant="35" id="iFs-cP-rbh"/>
                             <constraint firstItem="Mcg-7D-CER" firstAttribute="leading" secondItem="pVE-c2-1oR" secondAttribute="leading" constant="20" id="iJi-da-eya"/>
@@ -111,6 +121,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="judgeImageView" destination="cPC-h9-L9Z" id="Cf0-mp-vAF"/>
                         <outlet property="quizButton1" destination="Mcg-7D-CER" id="oAT-2t-Iyg"/>
                         <outlet property="quizButton2" destination="sJm-lE-ri7" id="5KQ-Ov-g5y"/>
                         <outlet property="quizButton3" destination="6x4-BG-JIg" id="bEt-gZ-Afg"/>
@@ -122,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1O-Bg-YWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="93.842364532019715"/>
+            <point key="canvasLocation" x="1479" y="94"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="G0r-oV-Svo">
@@ -137,7 +148,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-Nw-c4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702" y="94"/>
+            <point key="canvasLocation" x="2297" y="94"/>
+        </scene>
+        <!--Select Level View Controller-->
+        <scene sceneID="b0L-Dt-MCH">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="XxC-cp-4Wb" customClass="SelectLevelViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Sa-lo-Cxc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-0l-seH">
+                                <rect key="frame" x="100" y="544" width="175" height="30"/>
+                                <state key="normal" title="中"/>
+                                <connections>
+                                    <action selector="levelSelectButtonWithSender:" destination="XxC-cp-4Wb" eventType="touchUpInside" id="yWX-Cl-mwY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh8-Fw-LPM">
+                                <rect key="frame" x="100" y="614" width="175" height="30"/>
+                                <state key="normal" title="高"/>
+                                <connections>
+                                    <action selector="levelSelectButtonWithSender:" destination="XxC-cp-4Wb" eventType="touchUpInside" id="aGZ-Og-N3u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riM-JA-aL1">
+                                <rect key="frame" x="100" y="474" width="175" height="30"/>
+                                <state key="normal" title="低"/>
+                                <connections>
+                                    <action selector="levelSelectButtonWithSender:" destination="XxC-cp-4Wb" eventType="touchUpInside" id="9cW-A8-GW4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VHr-ln-DBl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VHr-ln-DBl" firstAttribute="trailing" secondItem="riM-JA-aL1" secondAttribute="trailing" constant="100" id="7UG-Wz-mkg"/>
+                            <constraint firstItem="riM-JA-aL1" firstAttribute="top" secondItem="VHr-ln-DBl" secondAttribute="top" constant="430" id="CpM-Kt-hjN"/>
+                            <constraint firstItem="Z4h-0l-seH" firstAttribute="top" secondItem="riM-JA-aL1" secondAttribute="bottom" constant="40" id="Eau-l1-mP7"/>
+                            <constraint firstItem="Z4h-0l-seH" firstAttribute="leading" secondItem="VHr-ln-DBl" secondAttribute="leading" constant="100" id="T7q-2y-Vbt"/>
+                            <constraint firstItem="Bh8-Fw-LPM" firstAttribute="leading" secondItem="VHr-ln-DBl" secondAttribute="leading" constant="100" id="ZCt-t4-Dia"/>
+                            <constraint firstItem="VHr-ln-DBl" firstAttribute="trailing" secondItem="Z4h-0l-seH" secondAttribute="trailing" constant="100" id="gTP-lk-eCc"/>
+                            <constraint firstItem="riM-JA-aL1" firstAttribute="leading" secondItem="VHr-ln-DBl" secondAttribute="leading" constant="100" id="l28-F9-LdW"/>
+                            <constraint firstItem="VHr-ln-DBl" firstAttribute="trailing" secondItem="Bh8-Fw-LPM" secondAttribute="trailing" constant="100" id="vlB-Zf-D2u"/>
+                            <constraint firstItem="Bh8-Fw-LPM" firstAttribute="top" secondItem="Z4h-0l-seH" secondAttribute="bottom" constant="40" id="wVb-Bd-b1r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectButton1" destination="riM-JA-aL1" id="XTR-Qw-GXd"/>
+                        <outlet property="selectButton2" destination="Z4h-0l-seH" id="jcT-Nx-2tZ"/>
+                        <outlet property="selectButton3" destination="Bh8-Fw-LPM" id="TaH-Yw-fIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QmT-Oa-5HE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="94"/>
         </scene>
     </scenes>
     <resources>
