@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         //グラデーション
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height / 2)
-        gradientLayer.colors = [colors.bluePurple.cgColor, colors.blue.cgColor]
+        gradientLayer.colors = [colors.blueGreen.cgColor, colors.green.cgColor]
         gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
         view.layer.insertSublayer(gradientLayer, at: 0)
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         button.setTitle("スタート", for: .normal)
         button.setTitleColor(colors.blue, for: .normal)
         button.frame = CGRect(x: 92, y: 635, width: 200, height: 60)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 50)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 50, weight: .heavy)
         button.addTarget(self, action: #selector(tapActionButton), for: .touchDown)
         self.view.addSubview(button)
         
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         contentView.layer.shadowColor = UIColor.gray.cgColor
         view.addSubview(contentView)
         
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .systemGray5
         
         //imageの作成
         let imageView = UIImageView()

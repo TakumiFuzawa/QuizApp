@@ -18,11 +18,13 @@ class SelectLevelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .systemGray5
 
         //グラデーション
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height / 2.5)
-        gradientLayer.colors = [colors.bluePurple.cgColor, colors.blue.cgColor]
+        gradientLayer.colors = [colors.blueGreen.cgColor, colors.green.cgColor]
         gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
         view.layer.insertSublayer(gradientLayer, at: 0)
@@ -32,16 +34,19 @@ class SelectLevelViewController: UIViewController {
         selectLabel.text = "難易度を選択してください。"
         selectLabel.textColor = .white
         selectLabel.frame = CGRect(x: 10, y: 170, width: 370, height: 50)
-        selectLabel.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
+        selectLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         self.view.addSubview(selectLabel)
         
         //buttonのlayer
         selectButton1.setTitleColor(colors.blue, for: .normal)
-        selectButton1.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        selectButton1.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
+        
+        
         selectButton2.setTitleColor(colors.blue, for: .normal)
-        selectButton2.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        selectButton2.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
+        
         selectButton3.setTitleColor(colors.blue, for: .normal)
-        selectButton3.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        selectButton3.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
         
     }
     
