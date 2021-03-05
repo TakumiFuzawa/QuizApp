@@ -10,6 +10,7 @@ import UIKit
 class SelectLevelViewController: UIViewController {
     
     let colors = Colors()
+    var selectTag = 0
     
     @IBOutlet var selectButton1: UIButton!
     @IBOutlet var selectButton2: UIButton!
@@ -44,9 +45,17 @@ class SelectLevelViewController: UIViewController {
         
     }
     
+    //画面遷移
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let quizVC = segue.destination as! QuizViewController
+        quizVC.selectlLabel = selectTag
+    }
+    
     //buttonタップ時の処理
     @IBAction func levelSelectButton(sender: UIButton) {
         print(sender.tag)
+        selectTag = sender.tag
+        performSegue(withIdentifier: "toQuiz", sender: nil)
     }
     
 

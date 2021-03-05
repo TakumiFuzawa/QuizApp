@@ -15,6 +15,7 @@ class QuizViewController: UIViewController {
     var quizArray: [String] = []
     var quizCount = 0
     var correctCount = 0
+    var selectlLabel = 0
     
     @IBOutlet var quizNumberLabel: UILabel!
     @IBOutlet var quizTextView: UITextView!
@@ -27,6 +28,8 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("選択したは難易度\(selectlLabel)")
+        
         //背景色
         view.backgroundColor = .systemGray5
         
@@ -34,7 +37,7 @@ class QuizViewController: UIViewController {
         quizNumberLabel.text = "第\(quizCount + 1)問"
         quizNumberLabel.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
         
-        csvArray = loadCSV(fileName: "quiz")
+        csvArray = loadCSV(fileName: "quiz\(selectlLabel)")
         print(csvArray)
         
         quizArray = csvArray[quizCount].components(separatedBy: ",")
@@ -60,6 +63,7 @@ class QuizViewController: UIViewController {
     
     //nextquiz
     func nextQuiz() {
+        
         quizCount += 1
         
         if quizCount < csvArray.count {

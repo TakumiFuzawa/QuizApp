@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D682FA5925F0B97700D3759B /* quiz2.csv in Resources */ = {isa = PBXBuildFile; fileRef = D682FA5825F0B97700D3759B /* quiz2.csv */; };
 		D683D50B25EF72B5007A7F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D683D50A25EF72B5007A7F8A /* AppDelegate.swift */; };
 		D683D50D25EF72B5007A7F8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D683D50C25EF72B5007A7F8A /* SceneDelegate.swift */; };
 		D683D50F25EF72B5007A7F8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D683D50E25EF72B5007A7F8A /* ViewController.swift */; };
@@ -16,11 +17,13 @@
 		D683D52125EF74C2007A7F8A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D683D52025EF74C2007A7F8A /* Colors.swift */; };
 		D683D52525EFA326007A7F8A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D683D52425EFA326007A7F8A /* QuizViewController.swift */; };
 		D683D52925EFAE09007A7F8A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D683D52825EFAE09007A7F8A /* ScoreViewController.swift */; };
-		D683D52D25EFB334007A7F8A /* quiz.csv in Resources */ = {isa = PBXBuildFile; fileRef = D683D52C25EFB334007A7F8A /* quiz.csv */; };
+		D683D52D25EFB334007A7F8A /* quiz1.csv in Resources */ = {isa = PBXBuildFile; fileRef = D683D52C25EFB334007A7F8A /* quiz1.csv */; };
 		D6B8172725F08A0C00A0DC76 /* SelectLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B8172625F08A0C00A0DC76 /* SelectLevelViewController.swift */; };
+		D6BADF8A25F1D0A3005E2878 /* quiz3.csv in Resources */ = {isa = PBXBuildFile; fileRef = D6BADF8925F1D0A3005E2878 /* quiz3.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D682FA5825F0B97700D3759B /* quiz2.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz2.csv; sourceTree = "<group>"; };
 		D683D50725EF72B5007A7F8A /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D683D50A25EF72B5007A7F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D683D50C25EF72B5007A7F8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,8 +35,9 @@
 		D683D52025EF74C2007A7F8A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D683D52425EFA326007A7F8A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		D683D52825EFAE09007A7F8A /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
-		D683D52C25EFB334007A7F8A /* quiz.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz.csv; sourceTree = "<group>"; };
+		D683D52C25EFB334007A7F8A /* quiz1.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz1.csv; sourceTree = "<group>"; };
 		D6B8172625F08A0C00A0DC76 /* SelectLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelViewController.swift; sourceTree = "<group>"; };
+		D6BADF8925F1D0A3005E2878 /* quiz3.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz3.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D682FA5725F0B95300D3759B /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				D683D52C25EFB334007A7F8A /* quiz1.csv */,
+				D682FA5825F0B97700D3759B /* quiz2.csv */,
+				D6BADF8925F1D0A3005E2878 /* quiz3.csv */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		D683D4FE25EF72B5007A7F8A = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +80,7 @@
 		D683D50925EF72B5007A7F8A /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				D682FA5725F0B95300D3759B /* Files */,
 				D683D51F25EF74B7007A7F8A /* Utillty */,
 				D683D50A25EF72B5007A7F8A /* AppDelegate.swift */,
 				D683D50C25EF72B5007A7F8A /* SceneDelegate.swift */,
@@ -77,7 +92,6 @@
 				D683D51325EF72B8007A7F8A /* Assets.xcassets */,
 				D683D51525EF72B8007A7F8A /* LaunchScreen.storyboard */,
 				D683D51825EF72B8007A7F8A /* Info.plist */,
-				D683D52C25EFB334007A7F8A /* quiz.csv */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -150,7 +164,9 @@
 				D683D51725EF72B8007A7F8A /* LaunchScreen.storyboard in Resources */,
 				D683D51425EF72B8007A7F8A /* Assets.xcassets in Resources */,
 				D683D51225EF72B5007A7F8A /* Main.storyboard in Resources */,
-				D683D52D25EFB334007A7F8A /* quiz.csv in Resources */,
+				D683D52D25EFB334007A7F8A /* quiz1.csv in Resources */,
+				D682FA5925F0B97700D3759B /* quiz2.csv in Resources */,
+				D6BADF8A25F1D0A3005E2878 /* quiz3.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
