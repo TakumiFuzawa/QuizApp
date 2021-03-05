@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1O-Bg-YWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="94"/>
+            <point key="canvasLocation" x="1521" y="94"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="G0r-oV-Svo">
@@ -198,6 +198,7 @@
                         <outlet property="selectButton1" destination="riM-JA-aL1" id="XTR-Qw-GXd"/>
                         <outlet property="selectButton2" destination="Z4h-0l-seH" id="jcT-Nx-2tZ"/>
                         <outlet property="selectButton3" destination="Bh8-Fw-LPM" id="TaH-Yw-fIa"/>
+                        <segue destination="wZk-82-AEY" kind="presentation" identifier="toQuiz" id="MLj-Fs-4rH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmT-Oa-5HE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

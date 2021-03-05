@@ -46,7 +46,7 @@ class ScoreViewController: UIViewController {
     //ボタンタップしたらの処理
     @objc func actionButton() {
         //viewControllerに戻る
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+        self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
     
     
