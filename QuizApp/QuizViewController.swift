@@ -30,28 +30,44 @@ class QuizViewController: UIViewController {
         
         print("選択したは難易度\(selectlLabel)")
         
-        //背景色
         view.backgroundColor = .systemGray5
+        
+        //グラデーション
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height / 2)
+        gradientLayer.colors = [colors.blueGreen.cgColor, colors.green.cgColor]
+        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
+        view.layer.insertSublayer(gradientLayer, at: 0)
         
         //labelのlayer
         quizNumberLabel.text = "第\(quizCount + 1)問"
         quizNumberLabel.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
         
+        //問題をシャッフル
         csvArray = loadCSV(fileName: "quiz\(selectlLabel)")
-        print(csvArray)
+        csvArray.shuffle()
+       
         
         quizArray = csvArray[quizCount].components(separatedBy: ",")
         
         quizTextView.text = quizArray[0]
-        quizTextView.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        quizTextView.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         
         quizButton1.setTitleColor(colors.blue, for: .normal)
+        quizButton1.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
         quizButton1.setTitle(quizArray[2], for: .normal)
+        
         quizButton2.setTitleColor(colors.blue, for: .normal)
+        quizButton2.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
         quizButton2.setTitle(quizArray[3], for: .normal)
+        
         quizButton3.setTitleColor(colors.blue, for: .normal)
+        quizButton3.titleLabel?.font = UIFont.systemFont(ofSize:20, weight: .heavy)
         quizButton3.setTitle(quizArray[4], for: .normal)
+        
         quizButton4.setTitleColor(colors.blue, for: .normal)
+        quizButton4.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
         quizButton4.setTitle(quizArray[5], for: .normal)
     }
     
@@ -74,10 +90,13 @@ class QuizViewController: UIViewController {
             
             quizButton1.setTitleColor(colors.blue, for: .normal)
             quizButton1.setTitle(quizArray[2], for: .normal)
+            
             quizButton2.setTitleColor(colors.blue, for: .normal)
             quizButton2.setTitle(quizArray[3], for: .normal)
+            
             quizButton3.setTitleColor(colors.blue, for: .normal)
             quizButton3.setTitle(quizArray[4], for: .normal)
+            
             quizButton4.setTitleColor(colors.blue, for: .normal)
             quizButton4.setTitle(quizArray[5], for: .normal)
             

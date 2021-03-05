@@ -43,7 +43,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6wE-xg-O90">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6wE-xg-O90">
                                 <rect key="frame" x="15" y="185" width="345" height="172.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -160,21 +160,21 @@
                         <subviews>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-0l-seH">
                                 <rect key="frame" x="100" y="544" width="175" height="30"/>
-                                <state key="normal" title="中"/>
+                                <state key="normal" title="ふつう"/>
                                 <connections>
                                     <action selector="levelSelectButtonWithSender:" destination="XxC-cp-4Wb" eventType="touchUpInside" id="yWX-Cl-mwY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh8-Fw-LPM">
                                 <rect key="frame" x="100" y="614" width="175" height="30"/>
-                                <state key="normal" title="高"/>
+                                <state key="normal" title="むずかしい"/>
                                 <connections>
                                     <action selector="levelSelectButtonWithSender:" destination="XxC-cp-4Wb" eventType="touchUpInside" id="aGZ-Og-N3u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riM-JA-aL1">
                                 <rect key="frame" x="100" y="474" width="175" height="30"/>
-                                <state key="normal" title="低"/>
+                                <state key="normal" title="やさしい"/>
                                 <connections>
                                     <action selector="levelSelectButtonWithSender:" destination="XxC-cp-4Wb" eventType="touchUpInside" id="9cW-A8-GW4"/>
                                 </connections>
