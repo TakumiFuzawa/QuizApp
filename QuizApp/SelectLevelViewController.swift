@@ -23,7 +23,7 @@ class SelectLevelViewController: UIViewController {
 
         //グラデーション
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height / 2.5)
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height / 2)
         gradientLayer.colors = [colors.blueGreen.cgColor, colors.green.cgColor]
         gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
@@ -33,7 +33,8 @@ class SelectLevelViewController: UIViewController {
         let selectLabel = UILabel()
         selectLabel.text = "難易度を選択してください。"
         selectLabel.textColor = .white
-        selectLabel.frame = CGRect(x: 10, y: 170, width: 370, height: 50)
+        selectLabel.textAlignment = .center
+        selectLabel.frame = CGRect(x: 10, y: 200, width: 370, height: 50)
         selectLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         self.view.addSubview(selectLabel)
         

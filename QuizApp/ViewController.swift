@@ -25,17 +25,17 @@ class ViewController: UIViewController {
         
         //UILabelの作成
         let lable = UILabel()
-        lable.text = "〇〇クイズ"
+        lable.text = "てきとうクイズ"
         lable.textColor = .white
-        lable.frame = CGRect(x: 72, y: 140, width: 300, height: 50)
-        lable.font = UIFont.systemFont(ofSize: 50, weight: .heavy)
+        lable.frame = CGRect(x: 35, y: 140, width: 300, height: 50)
+        lable.font = UIFont.systemFont(ofSize: 45, weight: .heavy)
         self.view.addSubview(lable)
         
         //buttonの設定
         let button = UIButton(type: .system)
-        button.setTitle("スタート", for: .normal)
+        button.setTitle("Start", for: .normal)
         button.setTitleColor(colors.blue, for: .normal)
-        button.frame = CGRect(x: 92, y: 635, width: 200, height: 60)
+        button.frame = CGRect(x: 85, y: 635, width: 200, height: 60)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 50, weight: .heavy)
         button.addTarget(self, action: #selector(tapActionButton), for: .touchDown)
         self.view.addSubview(button)
