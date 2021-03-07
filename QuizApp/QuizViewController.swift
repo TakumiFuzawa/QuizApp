@@ -34,7 +34,7 @@ class QuizViewController: UIViewController {
         
         //グラデーション
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height / 2)
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height / 1.9)
         gradientLayer.colors = [colors.blueGreen.cgColor, colors.green.cgColor]
         gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
@@ -47,11 +47,14 @@ class QuizViewController: UIViewController {
         //問題をシャッフル
         csvArray = loadCSV(fileName: "quiz\(selectlLabel)")
         csvArray.shuffle()
+        print(csvArray)
        
         
         quizArray = csvArray[quizCount].components(separatedBy: ",")
         
         quizTextView.text = quizArray[0]
+        quizTextView.layer.cornerRadius = 20
+        quizTextView.backgroundColor = .systemGray5
         quizTextView.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         
         quizButton1.setTitleColor(colors.blue, for: .normal)
