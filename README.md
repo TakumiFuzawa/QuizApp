@@ -3,7 +3,7 @@
 難易度別に分けたクイズアプリです。ジャンルは様々です。
 
 # DEMO
-<img src="https://user-images.githubusercontent.com/46737524/110435128-f757c780-80f5-11eb-98fa-300fba5267e3.png" width="100">
+<img src="https://user-images.githubusercontent.com/46737524/110435128-f757c780-80f5-11eb-98fa-300fba5267e3.png" width="200">
 # Features
 
 "hoge"のセールスポイントや差別化などを説明する
