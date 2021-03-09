@@ -3,7 +3,8 @@
 難易度別に分けたクイズアプリです。ジャンルは様々です。
 
 # DEMO
-<img src="https://user-images.githubusercontent.com/46737524/110435128-f757c780-80f5-11eb-98fa-300fba5267e3.png" width="200"> <img src="https://user-images.githubusercontent.com/46737524/110435762-c1671300-80f6-11eb-813d-1c753f29b1b9.png" width="200"> 
+<img src="https://user-images.githubusercontent.com/46737524/110435128-f757c780-80f5-11eb-98fa-300fba5267e3.png" width="200"> <img src="https://user-images.githubusercontent.com/46737524/110435762-c1671300-80f6-11eb-813d-1c753f29b1b9.png" width="200"> <img src="" width="200">  
+  
 
 # Features
 
