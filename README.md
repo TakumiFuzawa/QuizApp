@@ -15,7 +15,7 @@
 
 # Requirement
 
-* Swift(5.3.2) 
+* Swift (5.3.2) 
 
 # Installation
 
