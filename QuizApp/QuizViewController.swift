@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QuizViewController: UIViewController {
     
     let colors = Colors()
+    
+    //効果音をつける
+    var audioPlayer: AVAudioPlayer!
     
     var csvArray: [String] = []
     var quizArray: [String] = []
@@ -80,6 +84,12 @@ class QuizViewController: UIViewController {
         scoreVC.correct = correctCount
     }
     
+    //タイマーをセットするメソッド
+    func setUpTimer() {
+        //毎秒ごとにperSecTimerDoneメソッドを実行するタイマーを作成する
+        
+    }
+    
     //nextquiz
     func nextQuiz() {
         
@@ -130,9 +140,13 @@ class QuizViewController: UIViewController {
         if sender.tag == Int(quizArray[1]) {
             correctCount += 1
             print("正解")
+            //正解の効果音
+            playSound(name: "so1")
             judgeImageView.image = UIImage(named: "circle")
         } else {
             print("不正解")
+            //不正解の効果音
+            playSound(name: "so2")
             judgeImageView.image = UIImage(named: "unchecked")
         }
         print("スコア : \(correctCount)")
@@ -150,5 +164,28 @@ class QuizViewController: UIViewController {
             self.nextQuiz()
         }
        
+    }
+}
+
+//MARK: - AVAudioPlayer Delegate
+extension QuizViewController: AVAudioPlayerDelegate {
+    //bgm再生
+    func playSound(name: String) {
+        guard let path = Bundle.main.path(forResource: name, ofType: "mp3") else {
+            print("音源ファイルがみつかりません")
+            return
+        }
+        
+        do {
+            //AVAudioPlayerのインスタンス化
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            // AVAudioPlayerのデリゲートをセット
+            audioPlayer.delegate = self
+            //音楽の再生
+            audioPlayer.play()
+            
+        } catch {
+            
+        }
     }
 }

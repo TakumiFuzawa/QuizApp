@@ -7,12 +7,15 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     let colors = Colors()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
         
         setUpContent()
         //グラデーション
@@ -71,6 +74,6 @@ class ViewController: UIViewController {
         
     }
 
-
 }
+
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D669508D260213FA00D1CA6F /* so1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D669508C260213FA00D1CA6F /* so1.mp3 */; };
+		D66950902602140500D1CA6F /* so2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D669508F2602140500D1CA6F /* so2.mp3 */; };
 		D682FA5925F0B97700D3759B /* quiz2.csv in Resources */ = {isa = PBXBuildFile; fileRef = D682FA5825F0B97700D3759B /* quiz2.csv */; };
 		D683D50B25EF72B5007A7F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D683D50A25EF72B5007A7F8A /* AppDelegate.swift */; };
 		D683D50D25EF72B5007A7F8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D683D50C25EF72B5007A7F8A /* SceneDelegate.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D669508C260213FA00D1CA6F /* so1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = so1.mp3; sourceTree = SOURCE_ROOT; };
+		D669508F2602140500D1CA6F /* so2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = so2.mp3; sourceTree = SOURCE_ROOT; };
 		D682FA5825F0B97700D3759B /* quiz2.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz2.csv; sourceTree = "<group>"; };
 		D683D50725EF72B5007A7F8A /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D683D50A25EF72B5007A7F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				D6B8172625F08A0C00A0DC76 /* SelectLevelViewController.swift */,
 				D683D51025EF72B5007A7F8A /* Main.storyboard */,
 				D683D51325EF72B8007A7F8A /* Assets.xcassets */,
+				D669508C260213FA00D1CA6F /* so1.mp3 */,
+				D669508F2602140500D1CA6F /* so2.mp3 */,
 				D683D51525EF72B8007A7F8A /* LaunchScreen.storyboard */,
 				D683D51825EF72B8007A7F8A /* Info.plist */,
 			);
@@ -161,6 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D669508D260213FA00D1CA6F /* so1.mp3 in Resources */,
+				D66950902602140500D1CA6F /* so2.mp3 in Resources */,
 				D683D51725EF72B8007A7F8A /* LaunchScreen.storyboard in Resources */,
 				D683D51425EF72B8007A7F8A /* Assets.xcassets in Resources */,
 				D683D51225EF72B5007A7F8A /* Main.storyboard in Resources */,
